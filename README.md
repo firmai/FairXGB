@@ -37,3 +37,14 @@ If the feature has k categories, there are 2^(k-1)-1 possible partitions. Then w
 
 LightGBM implements Exclusive Feature Bundling (EFB) technique, which is based on research by (D. Fisher, 1958) to find the optimal split over categories.
 
+Fitting a model and having a high accuracy is great, but is usually not enough. Quite often, we also want a model to be simple and interpretable. An example of such an interpretable model is a linear regression, for which the fitted coefficient of a variable means holding other variables as fixed, how the response variable changes with respect to the predictor. For a linear regression, this relationship is also monotonic: the fitted coefficient is either positive or negative.
+
+Beyond Linear Models
+
+It is possible, at least approximately, to force the model monotonicity constraint in a non-linear model as well. For a tree-based model, if for each split of a particular variable we require the right daughter node’s average value to be higher than the left daughter node (otherwise the split will not be made), then approximately this predictor’s relationship with the dependent variable is monotonically increasing; and vise versa.
+
+
+We can also check the relationship between the feature (median income) and the dependent variable (median house value)- This in a nutshell is partial dependence. 
+
+
+
