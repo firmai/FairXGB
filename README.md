@@ -1,2 +1,2 @@
 # FairXGB
-Fair eXplainable Gradient Boosting Method combines XGBMs and fair
+Fair eXplainable Gradient Boosting Method that combines XGBMs and fairdata. 
